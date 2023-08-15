@@ -1,16 +1,16 @@
 // map<string, char> address2;
 map<string, char> address3;
 
-void readCompressedFile(ifstream &file, ofstream &newFile)
+void readCompressedFile(ifstream &file, ofstream &newFile, int s)
 {
     string t = "";
-    char *n = new char[3778];
+    char *n = new char[s];
     char k;
     int count = 0;
     while (file.good())
     {
-        file.read(n, 3778);
-        for (int i = 0; i < 3778; i++)
+        file.read(n, s);
+        for (int i = 0; i < s; i++)
         {
             char ch = n[i];
             count++;
@@ -32,6 +32,8 @@ void readCompressedFile(ifstream &file, ofstream &newFile)
         }
     }
     // cout<<"Count is "<<count<<endl;
+    delete[] n;
+
 }
 
 void recreateHashmap(ifstream &file)

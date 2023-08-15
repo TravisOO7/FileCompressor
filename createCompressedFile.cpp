@@ -26,7 +26,7 @@ class HuffmanTree{
 
     }
 
-    void readFile(fstream &file){
+    void readFile(ifstream &file){
 
 
         string a;
