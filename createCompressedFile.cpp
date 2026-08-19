@@ -112,9 +112,6 @@ class HuffmanTree{
 
         }
 
-
-
-
         while(pq.size() > 1){
             pair<int, Node*> first = pq.top();
             pq.pop();
